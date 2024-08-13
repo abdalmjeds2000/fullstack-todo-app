@@ -7,7 +7,7 @@ const app = express();
 
 // Use CORS middleware
 app.use(cors({
-  origin: '*',
+  origin: 'https://abdalmjed-todo.vercel.app',
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type']
 }));

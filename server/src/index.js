@@ -7,8 +7,8 @@ const app = express();
 app.use(express.json());
 app.use(router);
 app.use(cors({
-      origin: "https://abdalmjed-todo-api.vercel.app",
-      methods: ["POST", "GET"],
+      origin: "https://abdalmjed-todo.vercel.app",
+      methods: ["POST", "GET", "PUT", "DELETE"],
       credentials: true
 }));
 

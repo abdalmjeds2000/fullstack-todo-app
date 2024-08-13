@@ -9,7 +9,9 @@ const updateTodoRoute = require('./routes/updateTodoRoute');
 const deleteTodoRoute = require('./routes/deleteTodoRoute');
 
 const isLoggedIn = require('./middleware/isLoggedIn');
-router.post("/", () => "AbdAlmjed ToDo API");
+router.post("/", (req, res) => {
+  return res.json({ status: 200, message: "AbdAlmjed ToDo API!" });
+});
 router.post("/register", registerRoute);
 router.post("/login", loginRoute);
 router.get("/todos", isLoggedIn, readTodosRoute);

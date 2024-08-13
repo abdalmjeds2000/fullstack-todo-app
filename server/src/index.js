@@ -4,13 +4,14 @@ const cors = require("cors");
 const router = require("./router");
 
 const app = express();
+const corsOptions = {
+  origin: '*',
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type']
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(router);
-app.use(cors({
-      origin: '*',
-      methods: ['GET', 'POST'],
-      allowedHeaders: ['Content-Type']
-}));
 app.use((req, res, next) => {
   //allow access from every, elminate CORS
   res.setHeader('Access-Control-Allow-Origin','*');

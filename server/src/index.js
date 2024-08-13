@@ -7,9 +7,9 @@ const app = express();
 app.use(express.json());
 app.use(router);
 app.use(cors({
-      origin: "https://abdalmjed-todo.vercel.app",
-      methods: ["POST", "GET"],
-      credentials: true
+      origin: '*',
+      methods: ['GET', 'POST'],
+      allowedHeaders: ['Content-Type']
 }));
 
 

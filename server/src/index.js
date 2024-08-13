@@ -6,7 +6,7 @@ const router = require("./router");
 const app = express();
 app.use(express.json());
 app.use(cors({
-      origin: "https://abdalmjed-todo-server.vercel.app",
+      origin: "https://abdalmjed-todo-api.vercel.app",
       methods: ["POST", "GET", "PUT", "DELETE"],
       credentials: true
 }));

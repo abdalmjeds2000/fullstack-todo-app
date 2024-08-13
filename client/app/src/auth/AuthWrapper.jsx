@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { QueryClientProvider, QueryClient } from 'react-query';
 
 const queryClient = new QueryClient();
-const apiUrl = 'http://localhost:3001';
+const apiUrl = 'https://abdalmjed-todo-api.vercel.app';
 
 const AuthContext = createContext();
 export const AuthData = () => useContext(AuthContext);

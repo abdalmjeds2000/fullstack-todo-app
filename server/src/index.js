@@ -5,12 +5,12 @@ const router = require("./router");
 
 const app = express();
 app.use(express.json());
+app.use(router);
 app.use(cors({
       origin: "https://abdalmjed-todo-api.vercel.app",
-      methods: ["POST", "GET", "PUT", "DELETE"],
+      methods: ["POST", "GET"],
       credentials: true
 }));
-app.use(router);
 
 
 const username = process.env.USERNAME,

@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { QueryClientProvider, QueryClient } from 'react-query';
 
 const queryClient = new QueryClient();
+// const apiUrl = 'http://localhost:3001';
 const apiUrl = 'https://abdalmjed-todo-api.vercel.app';
 
 const AuthContext = createContext();
@@ -19,6 +20,7 @@ export const AuthWrapper = () => {
 
   const setAuthToken = (token) => {
     if(token) {
+      axios.defaults.withCredentials = true;
       axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
       localStorage.setItem('todo-app-token', token);
       setUser({ user: jwtDecode(token), isAuthenticated: true });
